@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		7798DB5028AE85620036EA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB4F28AE85620036EA17 /* AppDelegate.swift */; };
 		7798DB5228AE85620036EA17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB5128AE85620036EA17 /* SceneDelegate.swift */; };
-		7798DB5428AE85620036EA17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB5328AE85620036EA17 /* ViewController.swift */; };
-		7798DB5728AE85620036EA17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7798DB5528AE85620036EA17 /* Main.storyboard */; };
+		7798DB5428AE85620036EA17 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB5328AE85620036EA17 /* TimerViewController.swift */; };
 		7798DB5928AE85640036EA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798DB5828AE85640036EA17 /* Assets.xcassets */; };
 		7798DB5C28AE85640036EA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7798DB5A28AE85640036EA17 /* LaunchScreen.storyboard */; };
+		7798DB6428AE85EA0036EA17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6328AE85EA0036EA17 /* TabBarController.swift */; };
+		7798DB6B28AE8F080036EA17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */; };
+		7798DB6D28AE93BE0036EA17 /* TimerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6C28AE93BE0036EA17 /* TimerTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7798DB4C28AE85620036EA17 /* Lesson 2 HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 2 HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798DB4F28AE85620036EA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7798DB5128AE85620036EA17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7798DB5328AE85620036EA17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7798DB5628AE85620036EA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7798DB5328AE85620036EA17 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		7798DB5828AE85640036EA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7798DB5B28AE85640036EA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7798DB5D28AE85640036EA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7798DB6328AE85EA0036EA17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7798DB6C28AE93BE0036EA17 /* TimerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		7798DB4E28AE85620036EA17 /* Lesson 2 HW */ = {
 			isa = PBXGroup;
 			children = (
+				7798DB6528AE87F30036EA17 /* Application */,
+				7798DB6328AE85EA0036EA17 /* TabBarController.swift */,
+				7798DB5328AE85620036EA17 /* TimerViewController.swift */,
+				7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */,
+				7798DB6628AE88070036EA17 /* Supporting Files */,
+			);
+			path = "Lesson 2 HW";
+			sourceTree = "<group>";
+		};
+		7798DB6528AE87F30036EA17 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				7798DB4F28AE85620036EA17 /* AppDelegate.swift */,
 				7798DB5128AE85620036EA17 /* SceneDelegate.swift */,
-				7798DB5328AE85620036EA17 /* ViewController.swift */,
-				7798DB5528AE85620036EA17 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7798DB6628AE88070036EA17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				7798DB5828AE85640036EA17 /* Assets.xcassets */,
 				7798DB5A28AE85640036EA17 /* LaunchScreen.storyboard */,
 				7798DB5D28AE85640036EA17 /* Info.plist */,
+				7798DB6C28AE93BE0036EA17 /* TimerTools.swift */,
 			);
-			path = "Lesson 2 HW";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +149,6 @@
 			files = (
 				7798DB5C28AE85640036EA17 /* LaunchScreen.storyboard in Resources */,
 				7798DB5928AE85640036EA17 /* Assets.xcassets in Resources */,
-				7798DB5728AE85620036EA17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +159,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7798DB5428AE85620036EA17 /* ViewController.swift in Sources */,
+				7798DB5428AE85620036EA17 /* TimerViewController.swift in Sources */,
+				7798DB6428AE85EA0036EA17 /* TabBarController.swift in Sources */,
 				7798DB5028AE85620036EA17 /* AppDelegate.swift in Sources */,
+				7798DB6D28AE93BE0036EA17 /* TimerTools.swift in Sources */,
 				7798DB5228AE85620036EA17 /* SceneDelegate.swift in Sources */,
+				7798DB6B28AE8F080036EA17 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7798DB5528AE85620036EA17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7798DB5628AE85620036EA17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7798DB5A28AE85640036EA17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,10 +304,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Lesson 2 HW/Info.plist";
+				INFOPLIST_FILE = "Lesson 2 HW/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,10 +330,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Lesson 2 HW/Info.plist";
+				INFOPLIST_FILE = "Lesson 2 HW/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
