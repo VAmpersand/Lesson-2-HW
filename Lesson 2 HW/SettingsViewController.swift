@@ -7,21 +7,7 @@
 
 import UIKit
 
-final class SettingsViewController: UIViewController {
-
-    private let stackView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.spacing = 50
-        return view
-    }()
-
-    private let durationLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.text = "Set duration"
-        return label
-    }()
+final class SettingsViewController: BaseViewController {
 
     private let durationTextField: UITextField = {
         let field = UITextField()
@@ -31,37 +17,22 @@ final class SettingsViewController: UIViewController {
         return field
     }()
 
-    private let okButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .black.withAlphaComponent(0.1)
-        button.setTitleColor(.black, for: .normal)
-        button.setTitle("Ok", for: .normal)
-        return button
-    }()
-
     private var duration = 0
     weak var delegate: SettingDurationDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-        view.addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
-        ])
-
         [
-            durationLabel,
+            topLabel,
             durationTextField,
-            okButton,
+            button,
         ].forEach(stackView.addArrangedSubview)
 
-        okButton.addTarget(self, action: #selector(okButtonHandler), for: .touchUpInside)
+        topLabel.text = "Set duration"
+
+        button.setTitle("Ok", for: .normal)
+        button.addTarget(self, action: #selector(okButtonHandler), for: .touchUpInside)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

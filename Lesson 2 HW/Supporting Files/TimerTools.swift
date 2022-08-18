@@ -19,29 +19,29 @@ final class TimerTools {
     }
 
 
-    static func saveTimer(value: Int) {
+    static func saveTimer(value: Int, and duration: Int) {
         let dateStr = dateFormatter.string(from: Date())
         defaults.set(dateStr, forKey: "timerSavingDate")
         defaults.set(value, forKey: "timerValue")
-
-        print("Saved timer value: \(value) at date: \(dateStr)")
+        defaults.set(duration, forKey: "timerDuration")
     }
 
-    static func restoreTimer() -> Int? {
+    static func restoreTimer() -> (value: Int, duration: Int)? {
        guard let savingDateStr = defaults.string(forKey: "timerSavingDate"),
              let savingDate = dateFormatter.date(from: savingDateStr) else { return nil }
 
         let prevValue = defaults.integer(forKey: "timerValue")
+        let duration = defaults.integer(forKey: "timerDuration")
+
         let currentDate = dateFormatter.date(from: dateFormatter.string(from: Date()))!
-        let timrDiff = currentDate.timeIntervalSince(savingDate)
-        let result = prevValue + Int(timrDiff)
-        print("Restored timer value: \(result) at date: \(Date())")
-        
-        return result
+        let result = prevValue + Int(currentDate.timeIntervalSince(savingDate))
+
+        return (result, duration)
     }
 
     static func removeTimer() {
         defaults.set(nil, forKey: "timerSavingDate")
         defaults.set(nil, forKey: "timerValue")
+        defaults.set(nil, forKey: "timerDuration")
     }
 }

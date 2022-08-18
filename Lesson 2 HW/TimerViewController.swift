@@ -11,34 +11,13 @@ protocol SettingDurationDelegate: AnyObject {
     func set(duration: Int)
 }
 
-final class TimerViewController: UIViewController {
+final class TimerViewController: BaseViewController {
 
-    private let stackView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.spacing = 50
-        return view
-    }()
-
-    private let estimationLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        return label
-    }()
-    
     private let timerLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "Spend 0 sec"
         return label
-    }()
-
-    private let startButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .black.withAlphaComponent(0.1)
-        button.setTitleColor(.black, for: .normal)
-        button.setTitle("Start", for: .normal)
-        return button
     }()
 
     private var duration = 0
@@ -48,29 +27,41 @@ final class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-        view.addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
-        ])
-
         [
-            estimationLabel,
+            topLabel,
             timerLabel,
-            startButton,
+            button,
         ].forEach(stackView.addArrangedSubview)
 
-        estimationLabel.text = "Timer at \(duration) sec"
+        button.setTitle("Start", for: .normal)
+        button.addTarget(self, action: #selector(startButtonHandler), for: .touchUpInside)
 
-        startButton.addTarget(self, action: #selector(startButtonHandler), for: .touchUpInside)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(willResignActive),
+                                               name: UIApplication.willResignActiveNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didBecomeActive),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        topLabel.text = "Timer at \(duration) sec"
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        timerLabel.text = "Spend \(timerValue) sec"
     }
 
     @objc func startButtonHandler() {
         if duration > 0 {
+            TimerTools.removeTimer()
             resumeTimer(from: 0)
             
         } else {
@@ -78,7 +69,22 @@ final class TimerViewController: UIViewController {
         }
     }
 
+    @objc func willResignActive() {
+        if timerValue != 0 {
+            TimerTools.saveTimer(value: timerValue, and: duration)
+        }
+    }
+
+    @objc func didBecomeActive() {
+        if let restoredValue = TimerTools.restoreTimer() {
+            duration = restoredValue.duration
+            topLabel.text = "Timer at \(duration) sec"
+            resumeTimer(from: restoredValue.value)
+        }
+    }
+
     func resumeTimer(from value: Int) {
+        TimerTools.removeTimer()
         timer.invalidate()
         timerValue = value
         timerLabel.text = "Spend \(timerValue) sec"
