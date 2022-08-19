@@ -7,7 +7,7 @@
 
 /*
  TASK 1:
- При установке длительности таймера мы видим, что duration успешно приходит в TimerViewController и в методе func set(duration: Int) выводится в консоль, но не устанавливается в topLabel. Использую методы жизненного цикла вью контроллера сделайте так, чтобы при возвращении из SettingsViewController значение duration было yстановлено в topLabel.
+ При установке длительности таймера мы видим, что duration успешно приходит в TimerViewController и в методе func set(duration: Int) выводится в консоль, но не устанавливается в topLabel. Используя методы жизненного цикла вью контроллера сделайте так, чтобы при возвращении из SettingsViewController значение duration было yстановлено в topLabel.
 
 
  TASK 2:
