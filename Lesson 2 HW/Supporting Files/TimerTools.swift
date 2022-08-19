@@ -18,7 +18,6 @@ final class TimerTools {
         return formatter
     }
 
-
     static func saveTimer(value: Int) {
         let dateStr = dateFormatter.string(from: Date())
         defaults.set(dateStr, forKey: "timerSavingDate")

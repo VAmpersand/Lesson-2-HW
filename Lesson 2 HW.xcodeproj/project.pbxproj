@@ -15,6 +15,7 @@
 		7798DB6428AE85EA0036EA17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6328AE85EA0036EA17 /* TabBarController.swift */; };
 		7798DB6B28AE8F080036EA17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */; };
 		7798DB6D28AE93BE0036EA17 /* TimerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB6C28AE93BE0036EA17 /* TimerTools.swift */; };
+		77A6180A28B011A700D6DDD0 /* TASKS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6180928B011A700D6DDD0 /* TASKS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7798DB6328AE85EA0036EA17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7798DB6C28AE93BE0036EA17 /* TimerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTools.swift; sourceTree = "<group>"; };
+		77A6180928B011A700D6DDD0 /* TASKS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TASKS.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7798DB6328AE85EA0036EA17 /* TabBarController.swift */,
 				7798DB5328AE85620036EA17 /* TimerViewController.swift */,
 				7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */,
+				77A6180928B011A700D6DDD0 /* TASKS.swift */,
 				7798DB6628AE88070036EA17 /* Supporting Files */,
 			);
 			path = "Lesson 2 HW";
@@ -162,6 +165,7 @@
 				7798DB5428AE85620036EA17 /* TimerViewController.swift in Sources */,
 				7798DB6428AE85EA0036EA17 /* TabBarController.swift in Sources */,
 				7798DB5028AE85620036EA17 /* AppDelegate.swift in Sources */,
+				77A6180A28B011A700D6DDD0 /* TASKS.swift in Sources */,
 				7798DB6D28AE93BE0036EA17 /* TimerTools.swift in Sources */,
 				7798DB5228AE85620036EA17 /* SceneDelegate.swift in Sources */,
 				7798DB6B28AE8F080036EA17 /* SettingsViewController.swift in Sources */,
