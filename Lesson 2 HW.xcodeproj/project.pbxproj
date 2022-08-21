@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4E723428B2BA9A004CE1FA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E723328B2BA9A004CE1FA /* BaseViewController.swift */; };
+		2C4E723628B2C8C6004CE1FA /* Loger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E723528B2C8C6004CE1FA /* Loger.swift */; };
 		7798DB5028AE85620036EA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB4F28AE85620036EA17 /* AppDelegate.swift */; };
 		7798DB5228AE85620036EA17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB5128AE85620036EA17 /* SceneDelegate.swift */; };
 		7798DB5428AE85620036EA17 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798DB5328AE85620036EA17 /* TimerViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4E723328B2BA9A004CE1FA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2C4E723528B2C8C6004CE1FA /* Loger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loger.swift; sourceTree = "<group>"; };
 		7798DB4C28AE85620036EA17 /* Lesson 2 HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 2 HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798DB4F28AE85620036EA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7798DB5128AE85620036EA17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			children = (
 				7798DB6528AE87F30036EA17 /* Application */,
 				7798DB6328AE85EA0036EA17 /* TabBarController.swift */,
+				2C4E723328B2BA9A004CE1FA /* BaseViewController.swift */,
 				7798DB5328AE85620036EA17 /* TimerViewController.swift */,
 				7798DB6A28AE8F080036EA17 /* SettingsViewController.swift */,
 				77A6180928B011A700D6DDD0 /* TASKS.swift */,
@@ -88,6 +93,7 @@
 				7798DB5A28AE85640036EA17 /* LaunchScreen.storyboard */,
 				7798DB5D28AE85640036EA17 /* Info.plist */,
 				7798DB6C28AE93BE0036EA17 /* TimerTools.swift */,
+				2C4E723528B2C8C6004CE1FA /* Loger.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,10 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7798DB5428AE85620036EA17 /* TimerViewController.swift in Sources */,
+				2C4E723628B2C8C6004CE1FA /* Loger.swift in Sources */,
 				7798DB6428AE85EA0036EA17 /* TabBarController.swift in Sources */,
 				7798DB5028AE85620036EA17 /* AppDelegate.swift in Sources */,
 				77A6180A28B011A700D6DDD0 /* TASKS.swift in Sources */,
 				7798DB6D28AE93BE0036EA17 /* TimerTools.swift in Sources */,
+				2C4E723428B2BA9A004CE1FA /* BaseViewController.swift in Sources */,
 				7798DB5228AE85620036EA17 /* SceneDelegate.swift in Sources */,
 				7798DB6B28AE8F080036EA17 /* SettingsViewController.swift in Sources */,
 			);
@@ -307,6 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6PDU8D65F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lesson 2 HW/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -333,6 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6PDU8D65F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lesson 2 HW/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
