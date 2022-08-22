@@ -36,19 +36,17 @@ final class TimerViewController: BaseViewController {
         
         button.addTarget(self, action: #selector(startButtonHandler), for: .touchUpInside)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(appResiagnActivaNotify), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appResignActiveNotify), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActiveNotify), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("timerViewController - viewWillAppear")
         topLabel.text = "Timer at \(duration) sec"
     }
     
     
-    @objc func appResiagnActivaNotify() {
-        print("timer value = \(self.timerValue)")
+    @objc func appResignActiveNotify() {
         if (self.timerValue > 0) {
             TimerTools.saveTimer(value: timerValue, duration: duration)
         }
@@ -56,8 +54,6 @@ final class TimerViewController: BaseViewController {
     
     @objc func appDidBecomeActiveNotify() {
         if let (result, duration) = TimerTools.restoreTimer() {
-            print(result, "RESULT")
-            print(duration, "DURATION")
             self.duration = duration
             self.topLabel.text = "Timer at \(duration) sec"
             self.resumeTimer(from: result)
@@ -98,7 +94,5 @@ final class TimerViewController: BaseViewController {
 extension TimerViewController: SettingDurationDelegate {
     func set(duration: Int) {
         self.duration = duration
-        print("Duration geted. Value: \(duration)")
-        print(self.duration, "current duration")
     }
 }

@@ -11,10 +11,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
-    let loger = Loger()
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        loger.log(event: UIApplication.didFinishLaunchingNotification)
         let tabBarController = TabBarController()
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -25,23 +22,23 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
-        loger.log(event: UIApplication.willEnterForegroundNotification)
+        Loger.log(event: UIApplication.willEnterForegroundNotification)
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        loger.log(event: UIApplication.didBecomeActiveNotification)
+        Loger.log(event: UIApplication.didBecomeActiveNotification)
     }
     
     func sceneWillResignActive(_ scene: UIScene) {
-        loger.log(event: UIApplication.willResignActiveNotification)
+        Loger.log(event: UIApplication.willResignActiveNotification)
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
-        loger.log(event: UIApplication.didEnterBackgroundNotification)
+        Loger.log(event: UIApplication.didEnterBackgroundNotification)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
-        loger.log(event: UIApplication.willTerminateNotification)
+        Loger.log(event: UIApplication.willTerminateNotification)
     }
 }
 

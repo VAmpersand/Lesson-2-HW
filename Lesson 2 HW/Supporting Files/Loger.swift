@@ -8,26 +8,26 @@
 import UIKit
 
 final class Loger {
-    func log(event: Notification.Name) {
+    static func log(event: Notification.Name) {
         switch event {
         case UIApplication.didFinishLaunchingNotification:
-            self.printStringWithDate("didFinishLaunchingNotification")
+            printStringWithDate("didFinishLaunchingNotification")
         case UIApplication.willEnterForegroundNotification:
-            self.printStringWithDate("willEnterForegroundNotification")
+            printStringWithDate("willEnterForegroundNotification")
         case UIApplication.didBecomeActiveNotification:
-            self.printStringWithDate("didBecomeActiveNotification")
+            printStringWithDate("didBecomeActiveNotification")
         case UIApplication.willResignActiveNotification:
-            self.printStringWithDate("willResignActiveNotification")
+            printStringWithDate("willResignActiveNotification")
         case UIApplication.didEnterBackgroundNotification:
-            self.printStringWithDate("didEnterBackgroundNotification")
+            printStringWithDate("didEnterBackgroundNotification")
         case UIApplication.willTerminateNotification:
-            self.printStringWithDate("willTerminateNotification")
+            printStringWithDate("willTerminateNotification")
         default:
-            return
+            break
         }
     }
     
-    private func printStringWithDate(_ str: String) {
+    private static func printStringWithDate(_ str: String) {
         print("\(str) -- \(Date())")
     }
 }

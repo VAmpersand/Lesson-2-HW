@@ -43,13 +43,3 @@ class BaseViewController: UIViewController {
         ])
     }
 }
-
-//extension BaseViewController {
-//    func buildButton(withTitle: String) -> UIButton {
-//        let button = UIButton()
-//        button.backgroundColor = .black.withAlphaComponent(0.1)
-//        button.setTitleColor(.black, for: .normal)
-//        button.setTitle(withTitle, for: .normal)
-//        return button
-//    }
-//}
