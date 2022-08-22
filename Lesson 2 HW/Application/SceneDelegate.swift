@@ -36,9 +36,5 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
         Loger.log(event: UIApplication.didEnterBackgroundNotification)
     }
-    
-    func sceneDidDisconnect(_ scene: UIScene) {
-        Loger.log(event: UIApplication.willTerminateNotification)
-    }
 }
 
