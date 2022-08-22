@@ -37,25 +37,25 @@ final class TimerViewController: BaseViewController {
         button.addTarget(self, action: #selector(startButtonHandler), for: .touchUpInside)
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(willResignActive),
+                                               selector: #selector(startButtonHandler),
                                                name: UIApplication.willResignActiveNotification,
                                                object: nil)
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didBecomeActive),
+                                               selector: #selector(startButtonHandler),
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         topLabel.text = "Timer at \(duration) sec"
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         timerLabel.text = "Spend \(timerValue) sec"
     }
 
